@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Windnb App
+
+A clone of the Airbnb app inspired from a challenge. Made using React
+
+## Screenshots
+
+- Desktop: ![](./Desktop_view.png)
+
+- Mobile: ![](./Mobile_view.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

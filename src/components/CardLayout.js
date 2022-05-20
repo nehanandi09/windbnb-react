@@ -14,8 +14,9 @@ function CardLayout() {
   //   });
   return (
     <div className="CardLayout">
-      {stays.map((stay) => (
+      {stays.map((stay, index) => (
         <Card
+          key={index}
           photo={stay.photo}
           type={stay.type}
           beds={stay.beds}

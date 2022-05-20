@@ -9,7 +9,7 @@ const SearchBar = () => {
         <input
           className="search-input"
           type="text"
-          value="Helsinki, Finland"
+          placeholder="Search Place"
         ></input>
         <input
           className="search-input"

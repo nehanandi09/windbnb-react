@@ -3,3 +3,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.5rem;
 }
+
+@media screen and (max-width: 800px) {
+  .CardLayout {
+    display: flex;
+    flex-direction: column;
+  }
+}
