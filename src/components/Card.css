@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: center;
   margin: 1.5rem;
-  width: 500px;
+  width: 420px;
 }
 
 @media screen and (max-width: 1200px) {
   .Card {
-    margin: 1rem 1rem 1.5rem;
+    margin: 1rem 0.75rem 1.5rem;
   }
 }
 
