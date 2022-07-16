@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo.svg";
 import SearchBar from "./SearchBar";
 
-function Navbar() {
+function Navbar({ stays, filteredData, setFilteredData }) {
   return (
     <nav
       style={{
@@ -13,7 +13,11 @@ function Navbar() {
       }}
     >
       <img src={logo} alt="logo" />
-      <SearchBar />
+      <SearchBar
+        stays={stays}
+        filteredData={filteredData}
+        setFilteredData={setFilteredData}
+      />
     </nav>
   );
 }

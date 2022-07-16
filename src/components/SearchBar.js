@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./SearchBar.css";
 import { MdSearch } from "react-icons/md";
 
-const SearchBar = () => {
+const SearchBar = ({ stays, filteredData, setFilteredData }) => {
+  const [search, setSearch] = useState("");
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
+    if (search.length > 0) {
+      const newData = stays.filter((item) => {
+        return item.city.toLowerCase().includes(search.toLowerCase());
+      });
+      setFilteredData(newData);
+    } else {
+      setFilteredData(stays);
+    }
+  };
+
+  if (!search) {
+    setFilteredData(stays);
+  }
+
   return (
-    <form>
-      <div className="SearchBar">
+    <div className="SearchBar">
+      <form className="search-form">
         <input
+          onChange={handleChange}
+          value={search}
           className="search-input"
           type="text"
-          placeholder="Search Place"
-        ></input>
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Add guests"
-        ></input>
+          placeholder="Search City"
+        />
+
         <button
           className="search-button"
+          type="submit"
           style={{ color: "#EB5757", fontSize: "20px" }}
         >
-          <MdSearch />
+          <MdSearch className="icon" />
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

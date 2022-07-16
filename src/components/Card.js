@@ -5,7 +5,7 @@ import { MdStar } from "react-icons/md";
 function Card({ photo, type, beds, rating, title }) {
   return (
     <div className="Card">
-      <img src={photo} className="Card__image" />
+      <img src={photo} className="Card__image" alt="property" />
       <div className="Card__description">
         {beds > 1 ? <span className="Card__host">Super host</span> : ""}
 

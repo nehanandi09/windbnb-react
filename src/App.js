@@ -1,14 +1,23 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import CardLayoutHeading from "./components/CardLayoutHeading";
 import CardLayout from "./components/CardLayout";
+import data from "./components/data/data.json";
 
 function App() {
+  const [stays, setStays] = useState(data);
+  const [filteredData, setFilteredData] = useState(stays);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar
+        stays={stays}
+        filteredData={filteredData}
+        setFilteredData={setFilteredData}
+      />
       <CardLayoutHeading />
-      <CardLayout />
+      <CardLayout filteredData={filteredData} />
     </div>
   );
 }
