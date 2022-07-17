@@ -1,14 +1,22 @@
 .Card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 1.5rem;
-  width: 420px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 31%;
+  margin: 1rem;
 }
 
 @media screen and (max-width: 1200px) {
   .Card {
     margin: 1rem 0.75rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .Card {
+    width: 100%;
+    margin: 1rem auto;
   }
 }
 

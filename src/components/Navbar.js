@@ -10,6 +10,7 @@ function Navbar({ stays, filteredData, setFilteredData }) {
         flexDirection: "row",
         alignContent: "baseline",
         justifyContent: "space-between",
+        padding: "4rem",
       }}
     >
       <img src={logo} alt="logo" />
